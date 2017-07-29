@@ -1,0 +1,14 @@
+<h4>Вопрос №{{number}}: {{question}}</h4>
+<div class="answersWrapp">
+    <div class="form-group">
+        {{#each answers}}
+            <div class="radio">
+                <label class="answerText">
+                    <input type="radio" name="{{../number}}" class="answerRadio" value="{{this}}">
+                    {{this}}
+                </label>
+            </div>
+        {{/each}}
+    </div>
+</div>
+

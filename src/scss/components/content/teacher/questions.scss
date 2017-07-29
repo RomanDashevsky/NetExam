@@ -1,0 +1,64 @@
+#content {
+  #questionsList {
+    .question {
+      &:hover {
+        background-color: $link-color;
+        cursor: pointer;
+      }
+    }
+
+    .question,
+    .showExam {
+      position: relative;
+
+      .answersHeader {
+        margin-top: 60px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .trueAnswer {
+        color: $btn-color;
+      }
+
+      section {
+        margin-bottom: 30px;
+      }
+    }
+
+    .validateMark {
+      .questionInvalid,
+      .questionValid {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: default;
+      }
+
+      .deleteQuestion {
+        position: absolute;
+        top: 86px;
+        right: 20px;
+        background-color: $bg-delete;
+
+        &:hover {
+          background-color: $bg-delete-hover;
+        }
+
+        &:active {
+          background-color: $bg-delete-click;
+        }
+      }
+
+      .questionInvalid {
+        background-color: $has-error-color;
+      }
+
+      .questionValid {
+        background-color: $btn-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<div class="examsWrapper">
+    <div class="well exam" id="addExamWrapper">
+        <h2 class="addExamHeader">Добавить экзамен</h2>
+        <form class="form-horizontal addExamForm" role="form">
+            <div class="col-xs-offset-1 col-xs-10">
+                <div class="form-group">
+                    <legend>ДОБАВЛЕНИЕ ЭКЗАМЕНА</legend>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10">
+                    <!--Название предмета-->
+                    <div class="form-group label-floating">
+                        <label for="nameInput" class="control-label">Название предмета</label>
+                        <input type="text" class="form-control" id="nameInput" name="name" required maxlength="50">
+                        <span class="help-block hidden"></span>
+                    </div>
+
+                    <!--Семестр-->
+                    <div class="form-group label-floating">
+                        <label for="semesterInput" class="control-label">Семестр</label>
+                        <input type="number" class="form-control" id="semesterInput" name="semester" required min="1" max="12">
+                        <span class="help-block hidden"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-xs-offset-1 col-xs-10">
+                    <button type="submit" class="btn btn-primary btn-block btn-raised">Добавить</button>
+                </div>
+            </div>
+        </form>
+        <div class="actionBtn">
+            <button class="btn btn-info btn-fab" id="addExam" title="Добавить экзамен"><i class="material-icons">add</i></button>
+        </div>
+    </div>
+
+    <div id="examsList">
+        {{#each collection}}
+            <div class="well exam editExam">
+                <ul>
+                    <li class="idAttr">{{attributes.id}}</li>
+                    <li>Название: {{attributes.name}}</li>
+                    <li>Семестр: {{attributes.semester}}</li>
+                    {{#if attributes.ready}}
+                        <li>Количество вопросов: {{attributes.questionsCountPerExam}}</li>
+                        <li>Время на сдачу: {{attributes.timeInMinutes}}</li>
+                    {{/if}}
+                </ul>
+            </div>
+        {{/each}}
+    </div>
+</div>

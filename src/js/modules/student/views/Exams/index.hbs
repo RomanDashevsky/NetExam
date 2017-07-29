@@ -1,0 +1,29 @@
+<div class="examsWrapper">
+    <div id="examsList">
+        {{#each examsCurrent}}
+            <div class="well exam editExam showExam">
+                <ul>
+                    <li class="idAttr">{{attributes.id}}</li>
+                    <li>Название: {{attributes.name}}</li>
+                    <li>Количество вопросов: {{attributes.questionsCountPerExam}}</li>
+                    <li>Время на экзамен: {{attributes.timeInMinutes}} мин.</li>
+                </ul>
+            </div>
+        {{else}}
+            {{#each exams}}
+                <div class="well exam editExam showExam">
+                    <ul>
+                        <li class="idAttr">{{attributes.id}}</li>
+                        <li>Название: {{attributes.name}}</li>
+                        <li>Количество вопросов: {{attributes.questionsCountPerExam}}</li>
+                        <li>Время на экзамен: {{attributes.timeInMinutes}} мин.</li>
+                    </ul>
+                </div>
+            {{else}}
+                <div class="well exam editExam showExam">
+                    <h3 id="EmptyExamHeader">Нет экзаменов для сдачи</h3>
+                </div>
+            {{/each}}
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,139 @@
+#content {
+  .exam {
+    font-size: 18px;
+    min-height: 100px;
+
+    ul {
+      list-style-type: none;
+      margin-top: 2px;
+    }
+  }
+
+   #controlExamButtons {
+    position: fixed;
+    margin: -20px 0 0 -70px;
+
+    .btn {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+
+  #addExamWrapper {
+    .addExamForm {
+      display: none;
+    }
+    height: 100px;
+
+    .addExamHeader {
+      font-size: 18px;
+      padding-left: 40px;
+      display: block;
+    }
+  }
+
+  .well.exam.group{
+    min-height: 200px;
+    overflow: hidden;
+  }
+
+  .well.exam.editExam.showExam{
+    position: relative;
+  }
+
+  .actionBtn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+
+    i {
+      font-size: 36px;
+      margin-left: -6px;
+    }
+
+    .btn.btn-fab {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .btn.btn-info.btn-fab {
+      background-color: $btn-color;
+
+      &:hover {
+        background-color: $btn-color-hover;
+      }
+
+      &:active {
+        background-color: $btn-color-click;
+      }
+    }
+  }
+
+  #examsList {
+    .editExam:hover {
+      cursor: pointer;
+      background-color: $link-color;
+    }
+  }
+
+  #editExamWrapper {
+    ul {
+      padding: 0;
+    }
+
+    .examInvalid {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      z-index: 10000;
+      cursor: default;
+      background-color: $has-error-color;
+    }
+  }
+
+  .answerInput {
+    padding-right: 30px;
+  }
+
+  .answersHeader {
+    margin-top: 40px;
+  }
+
+  .removeAnswerWrapper {
+    position: absolute;
+    right: 0;
+    top: 6px;
+
+    .btn.removeAnswer {
+      width: 26px;
+      height: 26px;
+      padding: 0;
+      margin: 0;
+      background-color: $link-color;
+      color: $bg-delete;
+
+      &:hover {
+        background-color: $bg-delete-hover;
+        color: $link-color;
+      }
+    }
+  }
+
+   #EmptyExamHeader {
+    font-size: 18px;
+    padding-left: 40px;
+    display: block;
+  }
+
+  @media all and (max-width: 768px) {
+    .exam {
+      font-size: 14px;
+    }
+
+    #controlExamButtons {
+      margin: -20px 0 0 -5px;
+    }
+
+  }
+
+}

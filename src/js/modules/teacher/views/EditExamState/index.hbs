@@ -1,0 +1,38 @@
+<form class="form-horizontal addExamForm" role="form">
+    <div class="col-xs-offset-1 col-xs-10">
+        <div class="form-group">
+            <legend>ИЗМЕНЕНИЕ СОСТОЯНИЯ ЭКЗАМЕНА</legend>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+            <!--Количество вопросов на экзамене-->
+            <div class="form-group label-floating">
+                <label for="questionsCountPerExamInput" class="control-label">Количество вопросов на экзамене</label>
+                <input type="number" class="form-control" id="questionsCountPerExamInput" name="questionsCountPerExam"
+                       required min="{{minQuestionsCountPerExam}}" value="{{minQuestionsCountPerExam}}">
+                <span class="help-block hidden"></span>
+            </div>
+
+            <!--Время на экзамен в минутах-->
+            <div class="form-group label-floating">
+                <label for="timeInMinutesInput" class="control-label">Время на экзамен в минутах</label>
+                <input type="number" class="form-control" id="timeInMinutesInput" name="timeInMinutes" required
+                       min="{{minTime}}" value="{{minTime}}">
+                <span class="help-block hidden"></span>
+            </div>
+
+            {{#if (InvalidExamStatus questions)}}
+                <span class="help-block" id="errorStatus">Исправте список вопросов</span>
+            {{/if}}
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-offset-1 col-xs-10">
+            <button class="btn btn-primary btn-block btn-raised" id="examReady">ГОТОВО</button>
+        </div>
+    </div>
+</form>

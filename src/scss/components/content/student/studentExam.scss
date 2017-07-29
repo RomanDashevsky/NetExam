@@ -1,0 +1,64 @@
+#content {
+  #timerWrapper {
+    position: fixed;
+    top: 28px;
+    right: 60px;
+
+    p {
+      font-size: 16pt;
+    }
+
+    .lessMinutes{
+      color: $bg-error-alert;
+    }
+  }
+
+  .answersWrapp {
+
+    min-height: 150px;
+    .radio {
+      .answerText {
+        padding-left: 35px;
+        color: $h-color;
+        &:hover {
+          color: $light-blue-400;
+        }
+        .check {
+          background-color: $light-blue-400;
+        }
+
+        .circle.checkCircle {
+          border-color: $light-blue-400;
+        }
+      }
+    }
+  }
+
+  .examsWrapper {
+    .btn-group.btn-group-justified.btn-group-raised {
+      .btn {
+        width: 50%;
+        background-color: $btn-color;
+        color: $link-color;
+
+        &:hover {
+          background-color: $btn-color-hover;
+        }
+
+        &:active {
+          background-color: $btn-color-click;
+        }
+
+        &:focus {
+          background-color: $btn-color-hover;
+        }
+      }
+    }
+  }
+
+  #solutions {
+    .well.exam.solutions {
+      height: 350px;
+    }
+  }
+}

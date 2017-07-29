@@ -1,0 +1,83 @@
+body {
+  background-color: $grey-200;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+#app {
+  padding: 0;
+}
+
+#navigation {
+  width: $lg-nav-width;
+  background-color: $grey-800;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  z-index: 100;
+}
+
+#contentWrapper {
+  padding-left: $lg-nav-width;
+  margin: 0;
+}
+
+#menuOn {
+  margin: 24px 0 0 11px;
+  color: inherit;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: hand;
+  list-style-type: none;
+  list-style-position: initial;
+  list-style-image: initial;
+  text-align: left;
+  text-decoration: none;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  border: none;
+}
+
+#scrollUpBtn {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  cursor: pointer;
+  z-index: 100000;
+  display: none;
+  background-color: $btn-color;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: $btn-color-hover;
+  }
+
+  &:active {
+    background-color: $btn-color-click;
+  }
+}
+
+.bottomStub {
+  height: 80px;
+}
+
+@media all and (max-width: 992px) and (min-width: 768px), (max-device-width: 992px) and (min-device-width: 768px) {
+  #navigation {
+    width: $sm-nav-width;
+  }
+
+  #contentWrapper {
+    padding-left: $sm-nav-width;
+  }
+}
+
+@media all and (max-width: 768px), (max-device-width: 768px) {
+  #navigation {
+    margin-left: -260px;
+  }
+
+  #contentWrapper {
+    padding-left: 15px;
+  }
+}

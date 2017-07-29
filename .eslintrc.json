@@ -1,0 +1,51 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "jquery": true
+    },
+
+    "globals": {
+        "_": true,
+        "$": true,
+        "Backbone": true,
+        "Bb": true,
+        "Validation": true,
+        "Mn": true,
+        "Radio": true,
+        "require": true,
+        "__dirname": true,
+        "module": true
+    },
+
+    "extends": [
+        "eslint:recommended"
+    ],
+
+    "settings": {
+        "import/resolver": {
+            "webpack": "webpack.config.js"
+        }
+    },
+
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+
+    "rules": {
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": 0
+    }
+}

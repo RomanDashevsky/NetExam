@@ -1,0 +1,11 @@
+#loaderWrapper {
+  #loader-gif {
+    margin: 100px auto;
+    display: block;
+  }
+  @media all and (max-width: 376px) {
+    #loader-gif {
+      width: 100%;
+    }
+  }
+}

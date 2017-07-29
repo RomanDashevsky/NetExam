@@ -1,0 +1,158 @@
+@import "content/student/studentExam";
+@import "content/student/solutions";
+@import "content/teacher/exam";
+@import "content/teacher/questions";
+
+#content {
+  margin-top: 100px;
+
+  .svgRole {
+    display: block;
+  }
+
+  .errorPage {
+    .svgError {
+      display: block;
+      width: 70%;
+      margin: 20px auto;
+    }
+  }
+
+  .errorPage,
+  .indexPage {
+
+    .indexNav ul {
+
+      list-style-type: none;
+      width: 100%;
+      padding: 0;
+
+      .btn {
+        margin-top: 10px;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+
+    }
+
+  }
+
+  .indexPage {
+    .indexPageHeader {
+      margin-bottom: 50px;
+    }
+  }
+
+  .linkRole {
+    margin: 40px 0;
+  }
+
+  .control-label {
+    padding-top: 0;
+  }
+
+  .icon-list-btn {
+    margin-left: 2px;
+  }
+
+  .btn.btn-primary.btn-block.btn-raised {
+
+    background-color: $btn-color;
+    color: $link-color;
+
+    &:hover {
+      background-color: $btn-color-hover;
+    }
+
+    &:active {
+      background-color: $btn-color-click;
+    }
+
+    &:focus {
+      background-color: $btn-color-hover;
+    }
+
+  }
+
+  .form-group.is-focused {
+
+    .form-control {
+      outline: none;
+      background-image: -webkit-gradient(linear, left top, left bottom, from($btn-color), to($btn-color)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+      background-image: -webkit-linear-gradient($btn-color, $btn-color), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+      background-image: -o-linear-gradient($btn-color, $btn-color), -o-linear-gradient(#D2D2D2, #D2D2D2);
+      background-image: linear-gradient($btn-color, $btn-color), linear-gradient(#D2D2D2, #D2D2D2);
+      -webkit-background-size: 100% 2px, 100% 1px;
+      background-size: 100% 2px, 100% 1px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      -webkit-transition-duration: 0.3s;
+      -o-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+    }
+
+    label,
+    label.control-label {
+      color: $btn-color;
+    }
+
+  }
+
+  .form-group.is-focused.has-error {
+
+    .form-control {
+      outline: none;
+      background-image: -webkit-gradient(linear, left top, left bottom, from($has-error-color), to($has-error-color)), -webkit-gradient(linear, left top, left bottom, from(#D2D2D2), to(#D2D2D2));
+      background-image: -webkit-linear-gradient($has-error-color, $has-error-color), -webkit-linear-gradient(#D2D2D2, #D2D2D2);
+      background-image: -o-linear-gradient($has-error-color, $has-error-color), -o-linear-gradient(#D2D2D2, #D2D2D2);
+      background-image: linear-gradient($has-error-color, $has-error-color), linear-gradient(#D2D2D2, #D2D2D2);
+      -webkit-background-size: 100% 2px, 100% 1px;
+      background-size: 100% 2px, 100% 1px;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      -webkit-transition-duration: 0.3s;
+      -o-transition-duration: 0.3s;
+      transition-duration: 0.3s;
+    }
+
+    label,
+    label.control-label {
+      color: $has-error-color;
+    }
+
+    .help-block {
+      color: $has-error-color;
+    }
+
+  }
+
+  .form-group.is-focused .form-control .material-input:after {
+    background-color: $btn-color;
+  }
+
+  .form-group legend {
+    color: $h-color;
+  }
+
+  .idAttr {
+    display: none;
+  }
+
+  #errorStatus {
+    color: $has-error-color;
+    font-size: 16px;
+  }
+
+  @media all and (max-width: 768px) {
+
+    .errorPage {
+      .svgError {
+        width: 90%;
+      }
+    }
+
+  }
+
+}

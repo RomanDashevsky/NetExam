@@ -1,0 +1,699 @@
+#content {
+  .btn,
+  .input-group-btn .btn {
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    padding: 8px 30px;
+    margin: 10px 1px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    will-change: box-shadow, transform;
+    -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    background: transparent;
+  }
+
+  .btn::-moz-focus-inner,
+  .input-group-btn .btn::-moz-focus-inner {
+    border: 0;
+  }
+
+  .btn:not(.btn-raised),
+  .input-group-btn .btn:not(.btn-raised) {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .btn:not(.btn-raised),
+  .btn:not(.btn-raised).btn-default,
+  .input-group-btn .btn:not(.btn-raised),
+  .input-group-btn .btn:not(.btn-raised).btn-default {
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .btn:not(.btn-raised).btn-inverse,
+  .input-group-btn .btn:not(.btn-raised).btn-inverse {
+    color: #3f51b5;
+  }
+
+  .btn:not(.btn-raised).btn-primary,
+  .input-group-btn .btn:not(.btn-raised).btn-primary {
+    color: #009688;
+  }
+
+  .btn:not(.btn-raised).btn-success,
+  .input-group-btn .btn:not(.btn-raised).btn-success {
+    color: #4caf50;
+  }
+
+  .btn:not(.btn-raised).btn-info,
+  .input-group-btn .btn:not(.btn-raised).btn-info {
+    color: #03a9f4;
+  }
+
+  .btn:not(.btn-raised).btn-warning,
+  .input-group-btn .btn:not(.btn-raised).btn-warning {
+    color: #ff5722;
+  }
+
+  .btn:not(.btn-raised).btn-danger,
+  .input-group-btn .btn:not(.btn-raised).btn-danger {
+    color: #f44336;
+  }
+
+  .btn:not(.btn-raised):not(.btn-link):focus,
+  .btn:not(.btn-raised):not(.btn-link):hover,
+  .input-group-btn .btn:not(.btn-raised):not(.btn-link):focus,
+  .input-group-btn .btn:not(.btn-raised):not(.btn-link):hover {
+    background-color: rgba(153, 153, 153, 0.2);
+  }
+
+  .theme-dark .btn:not(.btn-raised):not(.btn-link):focus,
+  .theme-dark .btn:not(.btn-raised):not(.btn-link):hover,
+  .theme-dark .input-group-btn .btn:not(.btn-raised):not(.btn-link):focus,
+  .theme-dark .input-group-btn .btn:not(.btn-raised):not(.btn-link):hover {
+    background-color: rgba(204, 204, 204, 0.15);
+  }
+
+  .btn-group-raised .btn,
+  .btn-group-raised .btn.btn-default,
+  .btn-group-raised .input-group-btn .btn,
+  .btn-group-raised .input-group-btn .btn.btn-default,
+  .btn.btn-fab,
+  .btn.btn-fab.btn-default,
+  .btn.btn-raised,
+  .btn.btn-raised.btn-default,
+  .input-group-btn .btn.btn-fab,
+  .input-group-btn .btn.btn-fab.btn-default,
+  .input-group-btn .btn.btn-raised,
+  .input-group-btn .btn.btn-raised.btn-default {
+    background-color: #EEEEEE;
+    color: rgba(0, 0, 0, 0.87);
+  }
+
+  .btn-group-raised .btn.btn-inverse,
+  .btn-group-raised .input-group-btn .btn.btn-inverse,
+  .btn.btn-fab.btn-inverse,
+  .btn.btn-raised.btn-inverse,
+  .input-group-btn .btn.btn-fab.btn-inverse,
+  .input-group-btn .btn.btn-raised.btn-inverse {
+    background-color: #3f51b5;
+    color: #ffffff;
+  }
+
+  .btn-group-raised .btn.btn-primary,
+  .btn-group-raised .input-group-btn .btn.btn-primary,
+  .btn.btn-fab.btn-primary,
+  .btn.btn-raised.btn-primary,
+  .input-group-btn .btn.btn-fab.btn-primary,
+  .input-group-btn .btn.btn-raised.btn-primary {
+    background-color: #009688;
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .btn-group-raised .btn.btn-success,
+  .btn-group-raised .input-group-btn .btn.btn-success,
+  .btn.btn-fab.btn-success,
+  .btn.btn-raised.btn-success,
+  .input-group-btn .btn.btn-fab.btn-success,
+  .input-group-btn .btn.btn-raised.btn-success {
+    background-color: #4caf50;
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .btn-group-raised .btn.btn-info,
+  .btn-group-raised .input-group-btn .btn.btn-info,
+  .btn.btn-fab.btn-info,
+  .btn.btn-raised.btn-info,
+  .input-group-btn .btn.btn-fab.btn-info,
+  .input-group-btn .btn.btn-raised.btn-info {
+    background-color: #03a9f4;
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .btn-group-raised .btn.btn-warning,
+  .btn-group-raised .input-group-btn .btn.btn-warning,
+  .btn.btn-fab.btn-warning,
+  .btn.btn-raised.btn-warning,
+  .input-group-btn .btn.btn-fab.btn-warning,
+  .input-group-btn .btn.btn-raised.btn-warning {
+    background-color: #ff5722;
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .btn-group-raised .btn.btn-danger,
+  .btn-group-raised .input-group-btn .btn.btn-danger,
+  .btn.btn-fab.btn-danger,
+  .btn.btn-raised.btn-danger,
+  .input-group-btn .btn.btn-fab.btn-danger,
+  .input-group-btn .btn.btn-raised.btn-danger {
+    background-color: #f44336;
+    color: rgba(255, 255, 255, 0.84);
+  }
+
+  .btn-group-raised .btn:not(.btn-link),
+  .btn-group-raised .input-group-btn .btn:not(.btn-link),
+  .btn.btn-raised:not(.btn-link),
+  .input-group-btn .btn.btn-raised:not(.btn-link) {
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .btn-group-raised .btn:not(.btn-link).active,
+  .btn-group-raised .btn:not(.btn-link):active,
+  .btn-group-raised .btn:not(.btn-link):focus,
+  .btn-group-raised .btn:not(.btn-link):hover,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):hover,
+  .btn.btn-raised:not(.btn-link).active,
+  .btn.btn-raised:not(.btn-link):active,
+  .btn.btn-raised:not(.btn-link):focus,
+  .btn.btn-raised:not(.btn-link):hover,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus,
+  .input-group-btn .btn.btn-raised:not(.btn-link):hover {
+    outline: 0;
+  }
+
+  .btn-group-raised .btn:not(.btn-link).active,
+  .btn-group-raised .btn:not(.btn-link).active.btn-default,
+  .btn-group-raised .btn:not(.btn-link):active,
+  .btn-group-raised .btn:not(.btn-link):active.btn-default,
+  .btn-group-raised .btn:not(.btn-link):focus,
+  .btn-group-raised .btn:not(.btn-link):focus.btn-default,
+  .btn-group-raised .btn:not(.btn-link):hover,
+  .btn-group-raised .btn:not(.btn-link):hover.btn-default,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-default,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-default,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-default,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):hover,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-default,
+  .btn.btn-raised:not(.btn-link).active,
+  .btn.btn-raised:not(.btn-link).active.btn-default,
+  .btn.btn-raised:not(.btn-link):active,
+  .btn.btn-raised:not(.btn-link):active.btn-default,
+  .btn.btn-raised:not(.btn-link):focus,
+  .btn.btn-raised:not(.btn-link):focus.btn-default,
+  .btn.btn-raised:not(.btn-link):hover,
+  .btn.btn-raised:not(.btn-link):hover.btn-default,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active.btn-default,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-default,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-default,
+  .input-group-btn .btn.btn-raised:not(.btn-link):hover,
+  .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-default {
+    background-color: #e4e4e4;
+  }
+
+  .btn-group-raised .btn:not(.btn-link).active.btn-inverse,
+  .btn-group-raised .btn:not(.btn-link):active.btn-inverse,
+  .btn-group-raised .btn:not(.btn-link):focus.btn-inverse,
+  .btn-group-raised .btn:not(.btn-link):hover.btn-inverse,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-inverse,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-inverse,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-inverse,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-inverse,
+  .btn.btn-raised:not(.btn-link).active.btn-inverse,
+  .btn.btn-raised:not(.btn-link):active.btn-inverse,
+  .btn.btn-raised:not(.btn-link):focus.btn-inverse,
+  .btn.btn-raised:not(.btn-link):hover.btn-inverse,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active.btn-inverse,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-inverse,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-inverse,
+  .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-inverse {
+    background-color: #495bc0;
+  }
+
+  .btn-group-raised .btn:not(.btn-link).active.btn-primary,
+  .btn-group-raised .btn:not(.btn-link):active.btn-primary,
+  .btn-group-raised .btn:not(.btn-link):focus.btn-primary,
+  .btn-group-raised .btn:not(.btn-link):hover.btn-primary,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-primary,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-primary,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-primary,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-primary,
+  .btn.btn-raised:not(.btn-link).active.btn-primary,
+  .btn.btn-raised:not(.btn-link):active.btn-primary,
+  .btn.btn-raised:not(.btn-link):focus.btn-primary,
+  .btn.btn-raised:not(.btn-link):hover.btn-primary,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active.btn-primary,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-primary,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-primary,
+  .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-primary {
+    background-color: #00aa9a;
+  }
+
+  .btn-group-raised .btn:not(.btn-link).active.btn-success,
+  .btn-group-raised .btn:not(.btn-link):active.btn-success,
+  .btn-group-raised .btn:not(.btn-link):focus.btn-success,
+  .btn-group-raised .btn:not(.btn-link):hover.btn-success,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-success,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-success,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-success,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-success,
+  .btn.btn-raised:not(.btn-link).active.btn-success,
+  .btn.btn-raised:not(.btn-link):active.btn-success,
+  .btn.btn-raised:not(.btn-link):focus.btn-success,
+  .btn.btn-raised:not(.btn-link):hover.btn-success,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active.btn-success,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-success,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-success,
+  .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-success {
+    background-color: #59b75c;
+  }
+
+  .btn-group-raised .btn:not(.btn-link).active.btn-info,
+  .btn-group-raised .btn:not(.btn-link):active.btn-info,
+  .btn-group-raised .btn:not(.btn-link):focus.btn-info,
+  .btn-group-raised .btn:not(.btn-link):hover.btn-info,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-info,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-info,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-info,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-info,
+  .btn.btn-raised:not(.btn-link).active.btn-info,
+  .btn.btn-raised:not(.btn-link):active.btn-info,
+  .btn.btn-raised:not(.btn-link):focus.btn-info,
+  .btn.btn-raised:not(.btn-link):hover.btn-info,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active.btn-info,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-info,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-info,
+  .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-info {
+    background-color: #0fb2fc;
+  }
+
+  .btn-group-raised .btn:not(.btn-link).active.btn-warning,
+  .btn-group-raised .btn:not(.btn-link):active.btn-warning,
+  .btn-group-raised .btn:not(.btn-link):focus.btn-warning,
+  .btn-group-raised .btn:not(.btn-link):hover.btn-warning,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-warning,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-warning,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-warning,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-warning,
+  .btn.btn-raised:not(.btn-link).active.btn-warning,
+  .btn.btn-raised:not(.btn-link):active.btn-warning,
+  .btn.btn-raised:not(.btn-link):focus.btn-warning,
+  .btn.btn-raised:not(.btn-link):hover.btn-warning,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active.btn-warning,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-warning,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-warning,
+  .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-warning {
+    background-color: #ff6736;
+  }
+
+  .btn-group-raised .btn:not(.btn-link).active.btn-danger,
+  .btn-group-raised .btn:not(.btn-link):active.btn-danger,
+  .btn-group-raised .btn:not(.btn-link):focus.btn-danger,
+  .btn-group-raised .btn:not(.btn-link):hover.btn-danger,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active.btn-danger,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-danger,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.btn-danger,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):hover.btn-danger,
+  .btn.btn-raised:not(.btn-link).active.btn-danger,
+  .btn.btn-raised:not(.btn-link):active.btn-danger,
+  .btn.btn-raised:not(.btn-link):focus.btn-danger,
+  .btn.btn-raised:not(.btn-link):hover.btn-danger,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active.btn-danger,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-danger,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus.btn-danger,
+  .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-danger {
+    background-color: #f55549;
+  }
+
+  .btn-group-raised .btn:not(.btn-link).active,
+  .btn-group-raised .btn:not(.btn-link).active:hover,
+  .btn-group-raised .btn:not(.btn-link):active,
+  .btn-group-raised .btn:not(.btn-link):active:hover,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link).active:hover,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):active:hover,
+  .btn.btn-raised:not(.btn-link).active,
+  .btn.btn-raised:not(.btn-link).active:hover,
+  .btn.btn-raised:not(.btn-link):active,
+  .btn.btn-raised:not(.btn-link):active:hover,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active,
+  .input-group-btn .btn.btn-raised:not(.btn-link).active:hover,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active,
+  .input-group-btn .btn.btn-raised:not(.btn-link):active:hover {
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn-group-raised .btn:not(.btn-link):focus,
+  .btn-group-raised .btn:not(.btn-link):focus.active,
+  .btn-group-raised .btn:not(.btn-link):focus.active:hover,
+  .btn-group-raised .btn:not(.btn-link):focus:active,
+  .btn-group-raised .btn:not(.btn-link):focus:active:hover,
+  .btn-group-raised .btn:not(.btn-link):focus:hover,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.active,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus.active:hover,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus:active,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus:active:hover,
+  .btn-group-raised .input-group-btn .btn:not(.btn-link):focus:hover,
+  .btn.btn-raised:not(.btn-link):focus,
+  .btn.btn-raised:not(.btn-link):focus.active,
+  .btn.btn-raised:not(.btn-link):focus.active:hover,
+  .btn.btn-raised:not(.btn-link):focus:active,
+  .btn.btn-raised:not(.btn-link):focus:active:hover,
+  .btn.btn-raised:not(.btn-link):focus:hover,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus.active,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus.active:hover,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus:active,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus:active:hover,
+  .input-group-btn .btn.btn-raised:not(.btn-link):focus:hover {
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
+  }
+
+  .btn.btn-fab,
+  .input-group-btn .btn.btn-fab {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 56px;
+    margin: auto;
+    min-width: 56px;
+    width: 56px;
+    padding: 0;
+    overflow: hidden;
+    -webkit-box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
+    position: relative;
+    line-height: normal;
+  }
+
+  .btn.btn-fab .ripple-container,
+  .input-group-btn .btn.btn-fab .ripple-container {
+    border-radius: 50%;
+  }
+
+  .btn-group-sm .btn.btn-fab,
+  .btn-group-sm .input-group-btn .btn.btn-fab,
+  .btn.btn-fab.btn-fab-mini,
+  .input-group-btn .btn.btn-fab.btn-fab-mini {
+    height: 40px;
+    min-width: 40px;
+    width: 40px;
+  }
+
+  .btn-group-sm .btn.btn-fab.material-icons,
+  .btn-group-sm .input-group-btn .btn.btn-fab.material-icons,
+  .btn.btn-fab.btn-fab-mini.material-icons,
+  .input-group-btn .btn.btn-fab.btn-fab-mini.material-icons {
+    top: 0;
+    left: 0;
+  }
+
+  .btn.btn-fab i.material-icons,
+  .input-group-btn .btn.btn-fab i.material-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-12px, -12px);
+    -ms-transform: translate(-12px, -12px);
+    -o-transform: translate(-12px, -12px);
+    transform: translate(-12px, -12px);
+    line-height: 24px;
+    width: 24px;
+  }
+
+  .btn i.material-icons,
+  .input-group-btn .btn i.material-icons {
+    vertical-align: middle;
+  }
+
+  .btn-group-lg .btn,
+  .btn-group-lg .input-group-btn .btn,
+  .btn.btn-lg,
+  .input-group-btn .btn.btn-lg {
+    font-size: 16px;
+  }
+
+  .btn-group-sm .btn,
+  .btn-group-sm .input-group-btn .btn,
+  .btn.btn-sm,
+  .input-group-btn .btn.btn-sm {
+    padding: 5px 20px;
+    font-size: 12px;
+  }
+
+  .btn-group-xs .btn,
+  .btn-group-xs .input-group-btn .btn,
+  .btn.btn-xs,
+  .input-group-btn .btn.btn-xs {
+    padding: 4px 15px;
+    font-size: 10px;
+  }
+
+  .btn-group-vertical.disabled,
+  .btn-group-vertical:disabled,
+  .btn-group-vertical[disabled][disabled],
+  .btn-group.disabled,
+  .btn-group:disabled,
+  .btn-group[disabled][disabled],
+  .btn.disabled,
+  .btn:disabled,
+  .btn[disabled][disabled],
+  .input-group-btn .btn.disabled,
+  .input-group-btn .btn:disabled,
+  .input-group-btn .btn[disabled][disabled],
+  fieldset[disabled][disabled] .btn,
+  fieldset[disabled][disabled] .btn-group,
+  fieldset[disabled][disabled] .btn-group-vertical,
+  fieldset[disabled][disabled] .input-group-btn .btn {
+    color: rgba(0, 0, 0, 0.26);
+    background: transparent;
+  }
+
+  .theme-dark .btn-group-vertical.disabled,
+  .theme-dark .btn-group-vertical:disabled,
+  .theme-dark .btn-group-vertical[disabled][disabled],
+  .theme-dark .btn-group.disabled,
+  .theme-dark .btn-group:disabled,
+  .theme-dark .btn-group[disabled][disabled],
+  .theme-dark .btn.disabled,
+  .theme-dark .btn:disabled,
+  .theme-dark .btn[disabled][disabled],
+  .theme-dark .input-group-btn .btn.disabled,
+  .theme-dark .input-group-btn .btn:disabled,
+  .theme-dark .input-group-btn .btn[disabled][disabled],
+  .theme-dark fieldset[disabled][disabled] .btn,
+  .theme-dark fieldset[disabled][disabled] .btn-group,
+  .theme-dark fieldset[disabled][disabled] .btn-group-vertical,
+  .theme-dark fieldset[disabled][disabled] .input-group-btn .btn {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-group-vertical.disabled.btn-group-raised,
+  .btn-group-vertical.disabled.btn-group-raised.active,
+  .btn-group-vertical.disabled.btn-group-raised:active,
+  .btn-group-vertical.disabled.btn-group-raised:focus:not(:active),
+  .btn-group-vertical.disabled.btn-raised,
+  .btn-group-vertical.disabled.btn-raised.active,
+  .btn-group-vertical.disabled.btn-raised:active,
+  .btn-group-vertical.disabled.btn-raised:focus:not(:active),
+  .btn-group-vertical:disabled.btn-group-raised,
+  .btn-group-vertical:disabled.btn-group-raised.active,
+  .btn-group-vertical:disabled.btn-group-raised:active,
+  .btn-group-vertical:disabled.btn-group-raised:focus:not(:active),
+  .btn-group-vertical:disabled.btn-raised,
+  .btn-group-vertical:disabled.btn-raised.active,
+  .btn-group-vertical:disabled.btn-raised:active,
+  .btn-group-vertical:disabled.btn-raised:focus:not(:active),
+  .btn-group-vertical[disabled][disabled].btn-group-raised,
+  .btn-group-vertical[disabled][disabled].btn-group-raised.active,
+  .btn-group-vertical[disabled][disabled].btn-group-raised:active,
+  .btn-group-vertical[disabled][disabled].btn-group-raised:focus:not(:active),
+  .btn-group-vertical[disabled][disabled].btn-raised,
+  .btn-group-vertical[disabled][disabled].btn-raised.active,
+  .btn-group-vertical[disabled][disabled].btn-raised:active,
+  .btn-group-vertical[disabled][disabled].btn-raised:focus:not(:active),
+  .btn-group.disabled.btn-group-raised,
+  .btn-group.disabled.btn-group-raised.active,
+  .btn-group.disabled.btn-group-raised:active,
+  .btn-group.disabled.btn-group-raised:focus:not(:active),
+  .btn-group.disabled.btn-raised,
+  .btn-group.disabled.btn-raised.active,
+  .btn-group.disabled.btn-raised:active,
+  .btn-group.disabled.btn-raised:focus:not(:active),
+  .btn-group:disabled.btn-group-raised,
+  .btn-group:disabled.btn-group-raised.active,
+  .btn-group:disabled.btn-group-raised:active,
+  .btn-group:disabled.btn-group-raised:focus:not(:active),
+  .btn-group:disabled.btn-raised,
+  .btn-group:disabled.btn-raised.active,
+  .btn-group:disabled.btn-raised:active,
+  .btn-group:disabled.btn-raised:focus:not(:active),
+  .btn-group[disabled][disabled].btn-group-raised,
+  .btn-group[disabled][disabled].btn-group-raised.active,
+  .btn-group[disabled][disabled].btn-group-raised:active,
+  .btn-group[disabled][disabled].btn-group-raised:focus:not(:active),
+  .btn-group[disabled][disabled].btn-raised,
+  .btn-group[disabled][disabled].btn-raised.active,
+  .btn-group[disabled][disabled].btn-raised:active,
+  .btn-group[disabled][disabled].btn-raised:focus:not(:active),
+  .btn.disabled.btn-group-raised,
+  .btn.disabled.btn-group-raised.active,
+  .btn.disabled.btn-group-raised:active,
+  .btn.disabled.btn-group-raised:focus:not(:active),
+  .btn.disabled.btn-raised,
+  .btn.disabled.btn-raised.active,
+  .btn.disabled.btn-raised:active,
+  .btn.disabled.btn-raised:focus:not(:active),
+  .btn:disabled.btn-group-raised,
+  .btn:disabled.btn-group-raised.active,
+  .btn:disabled.btn-group-raised:active,
+  .btn:disabled.btn-group-raised:focus:not(:active),
+  .btn:disabled.btn-raised,
+  .btn:disabled.btn-raised.active,
+  .btn:disabled.btn-raised:active,
+  .btn:disabled.btn-raised:focus:not(:active),
+  .btn[disabled][disabled].btn-group-raised,
+  .btn[disabled][disabled].btn-group-raised.active,
+  .btn[disabled][disabled].btn-group-raised:active,
+  .btn[disabled][disabled].btn-group-raised:focus:not(:active),
+  .btn[disabled][disabled].btn-raised,
+  .btn[disabled][disabled].btn-raised.active,
+  .btn[disabled][disabled].btn-raised:active,
+  .btn[disabled][disabled].btn-raised:focus:not(:active),
+  .input-group-btn .btn.disabled.btn-group-raised,
+  .input-group-btn .btn.disabled.btn-group-raised.active,
+  .input-group-btn .btn.disabled.btn-group-raised:active,
+  .input-group-btn .btn.disabled.btn-group-raised:focus:not(:active),
+  .input-group-btn .btn.disabled.btn-raised,
+  .input-group-btn .btn.disabled.btn-raised.active,
+  .input-group-btn .btn.disabled.btn-raised:active,
+  .input-group-btn .btn.disabled.btn-raised:focus:not(:active),
+  .input-group-btn .btn:disabled.btn-group-raised,
+  .input-group-btn .btn:disabled.btn-group-raised.active,
+  .input-group-btn .btn:disabled.btn-group-raised:active,
+  .input-group-btn .btn:disabled.btn-group-raised:focus:not(:active),
+  .input-group-btn .btn:disabled.btn-raised,
+  .input-group-btn .btn:disabled.btn-raised.active,
+  .input-group-btn .btn:disabled.btn-raised:active,
+  .input-group-btn .btn:disabled.btn-raised:focus:not(:active),
+  .input-group-btn .btn[disabled][disabled].btn-group-raised,
+  .input-group-btn .btn[disabled][disabled].btn-group-raised.active,
+  .input-group-btn .btn[disabled][disabled].btn-group-raised:active,
+  .input-group-btn .btn[disabled][disabled].btn-group-raised:focus:not(:active),
+  .input-group-btn .btn[disabled][disabled].btn-raised,
+  .input-group-btn .btn[disabled][disabled].btn-raised.active,
+  .input-group-btn .btn[disabled][disabled].btn-raised:active,
+  .input-group-btn .btn[disabled][disabled].btn-raised:focus:not(:active),
+  fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised,
+  fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised.active,
+  fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:active,
+  fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:active),
+  fieldset[disabled][disabled] .btn-group-vertical.btn-raised,
+  fieldset[disabled][disabled] .btn-group-vertical.btn-raised.active,
+  fieldset[disabled][disabled] .btn-group-vertical.btn-raised:active,
+  fieldset[disabled][disabled] .btn-group-vertical.btn-raised:focus:not(:active),
+  fieldset[disabled][disabled] .btn-group.btn-group-raised,
+  fieldset[disabled][disabled] .btn-group.btn-group-raised.active,
+  fieldset[disabled][disabled] .btn-group.btn-group-raised:active,
+  fieldset[disabled][disabled] .btn-group.btn-group-raised:focus:not(:active),
+  fieldset[disabled][disabled] .btn-group.btn-raised,
+  fieldset[disabled][disabled] .btn-group.btn-raised.active,
+  fieldset[disabled][disabled] .btn-group.btn-raised:active,
+  fieldset[disabled][disabled] .btn-group.btn-raised:focus:not(:active),
+  fieldset[disabled][disabled] .btn.btn-group-raised,
+  fieldset[disabled][disabled] .btn.btn-group-raised.active,
+  fieldset[disabled][disabled] .btn.btn-group-raised:active,
+  fieldset[disabled][disabled] .btn.btn-group-raised:focus:not(:active),
+  fieldset[disabled][disabled] .btn.btn-raised,
+  fieldset[disabled][disabled] .btn.btn-raised.active,
+  fieldset[disabled][disabled] .btn.btn-raised:active,
+  fieldset[disabled][disabled] .btn.btn-raised:focus:not(:active),
+  fieldset[disabled][disabled] .input-group-btn .btn.btn-group-raised,
+  fieldset[disabled][disabled] .input-group-btn .btn.btn-group-raised.active,
+  fieldset[disabled][disabled] .input-group-btn .btn.btn-group-raised:active,
+  fieldset[disabled][disabled] .input-group-btn .btn.btn-group-raised:focus:not(:active),
+  fieldset[disabled][disabled] .input-group-btn .btn.btn-raised,
+  fieldset[disabled][disabled] .input-group-btn .btn.btn-raised.active,
+  fieldset[disabled][disabled] .input-group-btn .btn.btn-raised:active,
+  fieldset[disabled][disabled] .input-group-btn .btn.btn-raised:focus:not(:active) {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .btn-group,
+  .btn-group-vertical {
+    position: relative;
+    margin: 10px 1px;
+  }
+
+  .btn-group-vertical.open > .dropdown-toggle.btn,
+  .btn-group-vertical.open > .dropdown-toggle.btn.btn-default,
+  .btn-group.open > .dropdown-toggle.btn,
+  .btn-group.open > .dropdown-toggle.btn.btn-default {
+    background-color: #EEEEEE;
+  }
+
+  .btn-group-vertical.open > .dropdown-toggle.btn.btn-inverse,
+  .btn-group.open > .dropdown-toggle.btn.btn-inverse {
+    background-color: #3f51b5;
+  }
+
+  .btn-group-vertical.open > .dropdown-toggle.btn.btn-primary,
+  .btn-group.open > .dropdown-toggle.btn.btn-primary {
+    background-color: #009688;
+  }
+
+  .btn-group-vertical.open > .dropdown-toggle.btn.btn-success,
+  .btn-group.open > .dropdown-toggle.btn.btn-success {
+    background-color: #4caf50;
+  }
+
+  .btn-group-vertical.open > .dropdown-toggle.btn.btn-info,
+  .btn-group.open > .dropdown-toggle.btn.btn-info {
+    background-color: #03a9f4;
+  }
+
+  .btn-group-vertical.open > .dropdown-toggle.btn.btn-warning,
+  .btn-group.open > .dropdown-toggle.btn.btn-warning {
+    background-color: #ff5722;
+  }
+
+  .btn-group-vertical.open > .dropdown-toggle.btn.btn-danger,
+  .btn-group.open > .dropdown-toggle.btn.btn-danger {
+    background-color: #f44336;
+  }
+
+  .btn-group .dropdown-menu,
+  .btn-group-vertical .dropdown-menu {
+    border-radius: 0 0 2px 2px;
+  }
+
+  .btn-group-vertical.btn-group-raised,
+  .btn-group.btn-group-raised {
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  }
+
+  .btn-group .btn,
+  .btn-group .btn + .btn,
+  .btn-group .btn-group,
+  .btn-group .btn:active,
+  .btn-group-vertical .btn,
+  .btn-group-vertical .btn + .btn,
+  .btn-group-vertical .btn-group,
+  .btn-group-vertical .btn:active {
+    margin: 0;
+  }
+}

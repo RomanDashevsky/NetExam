@@ -1,0 +1,26 @@
+<div class="examsWrapper">
+    <div id="examsList">
+        {{#each collection}}
+            <div class="well exam editExam showExam">
+                <ul>
+                    <li class="idAttr">{{attributes.id}}</li>
+                    <li>Название: {{attributes.name}}</li>
+                    <li>Семестр: {{attributes.semester}}</li>
+                </ul>
+                <div class="actionBtn">
+                    {{#if ../showQuestionBtn}}
+                        <button class="btn btn-info btn-fab" id="showQuestions" title="Список вопросов" data-id="{{attributes.id}}"><i
+                                class="material-icons">list</i></button>
+                    {{else}}
+                        <button class="btn btn-info btn-fab" id="showStudents" title="Список студентов сдавших экзамен" data-id="{{attributes.id}}"><i
+                                class="material-icons">face</i></button>
+                    {{/if}}
+                </div>
+            </div>
+            {{else}}
+                <div class="well exam editExam showExam">
+                    <h3 id="EmptyExamHeader">В вашем списке нет готовых экзаменов</h3>
+                </div>
+        {{/each}}
+    </div>
+</div>

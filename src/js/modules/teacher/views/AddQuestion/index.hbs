@@ -1,0 +1,57 @@
+<form class="form-horizontal addExamForm">
+    <div class="col-xs-offset-1 col-xs-10">
+        <div class="form-group">
+            <legend>ДОБАВЛЕНИЕ ВОПРОСА</legend>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+            <!--Вопрос-->
+            <div class="form-group label-floating">
+                <label for="questionInput" class="control-label">Вопрос</label>
+                <input type="text" class="form-control" id="questionInput" name="question" maxlength="100"
+                       value="{{question}}">
+                <span class="help-block hidden"></span>
+            </div>
+
+            <!--Семестр-->
+            <div class="form-group label-floating">
+                <label for="correctInput" class="control-label">Номер правельного ответа</label>
+                <input type="number" class="form-control" id="correctInput" name="correct" min="1" max="12"
+                       value="{{correct}}">
+                <span class="help-block hidden"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-offset-1 col-xs-10 answersHeader">
+        <div class="form-group">
+            <legend>ОТВЕТЫ</legend>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-10">
+            <!--Ответ-->
+            {{#each answers}}
+                <div class="form-group label-floating">
+                    <label for="{{@key}}" class="control-label">Ответ № {{incIndex @key}}</label>
+                    <input type="text" class="form-control answerInput" id="{{@key}}" name="{{@key}}"
+                           value="{{this}}">
+                    <span class="help-block hidden"></span>
+                    <div class="removeAnswerWrapper">
+                        <button class="btn removeAnswer" data-index="{{@key}}"><i class="material-icons">remove</i></button>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-offset-1 col-xs-10">
+            <button class="btn btn-primary btn-block btn-raised" id="addAnswer">ДОБАВИТЬ ОТВЕТ</button>
+            <button class="btn btn-primary btn-block btn-raised" id="saveQuestion">СОХРАНИТЬ ВОПРОС</button>
+        </div>
+    </div>
+</form>

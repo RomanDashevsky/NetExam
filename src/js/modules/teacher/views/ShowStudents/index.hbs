@@ -1,0 +1,33 @@
+<div class="examsWrapper">
+    <div id="examsList">
+        <div class="well exam">
+            <div class="col-xs-offset-1 col-xs-10">
+                <div class="form-group">
+                    <legend>{{name}}</legend>
+                </div>
+            </div>
+        </div>
+        {{#each groups}}
+            <div class="well exam group">
+                <div class="col-xs-offset-1 col-xs-10">
+                    <div class="form-group">
+                        <legend>{{@key}}</legend>
+                    </div>
+
+                    {{#each students}}
+
+
+                        <ul>
+                            <li>{{firstName}} {{lastName}} {{patronymic}} : {{calculateRating correct wrong noAnswer}}</li>
+                        </ul>
+
+                    {{/each}}
+                </div>
+            </div>
+        {{else}}
+            <div class="well exam">
+                <h3 id="EmptyExamHeader">Ещё никто не сдавал этот экзамен</h3>
+            </div>
+        {{/each}}
+    </div>
+</div>

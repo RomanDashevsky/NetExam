@@ -1,0 +1,42 @@
+<div id="navigation">
+    <nav>
+        <a class="navbar-brand" href="/" title="NetExam">
+            <img src="images/logo.svg" class="logo">
+            <h1 class="hidden-sm">NetExam</h1>
+        </a>
+        <div class="visible-xs menuOnWrapper">
+            <button class="btn" id="menuOff"><i class="material-icons">menu</i></button>
+        </div>
+        <div id="menu"></div>
+    </nav>
+</div>
+<div class="visible-xs">
+    <button class="btn nav-button" id="menuOn"><i class="material-icons">menu</i></button>
+</div>
+<div id="contentWrapper" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2" id="content">
+        </div>
+
+        <div id="loaderWrapper" class="hidden col-xs-12">
+            <img src="images/loader.gif" id="loader-gif"/>
+        </div>
+
+        <button class="btn btn-primary btn-fab" title="Вверх" id="scrollUpBtn"><i
+                class="material-icons">arrow_upward</i></button>
+    </div>
+
+    <div class="alertWrapper">
+        <div class="row alertMassage" id="successAlertRegion">
+        </div>
+    </div>
+
+    <div class="alertWrapper">
+        <div class="row alertMassage" id="errorAlertRegion">
+        </div>
+    </div>
+
+    <div class="row bottomStub"></div>
+
+
+</div>

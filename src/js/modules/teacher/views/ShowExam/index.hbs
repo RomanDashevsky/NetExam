@@ -1,0 +1,84 @@
+<div class="examsWrapper">
+    <header class="well exam" id="editExamWrapper">
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-10">
+                <div class="form-group">
+                    <legend>СПИСОК ВОПРОСОВ</legend>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-10">
+                <!--Название предмета-->
+                <div class="form-group label-floating">
+                    <label for="nameInput" class="control-label">Название предмета</label>
+                    <input type="text" class="form-control" id="nameInput" name="name" value="{{exam.name}}" readonly
+                           required maxlength="50">
+                    <span class="help-block hidden"></span>
+                </div>
+
+                <!--Семестр-->
+                <div class="form-group label-floating">
+                    <label for="semesterInput" class="control-label">Семестр</label>
+                    <input type="number" class="form-control" id="semesterInput" name="semester"
+                           value="{{exam.semester}}" readonly required min="1" max="12">
+                    <span class="help-block hidden"></span>
+                </div>
+
+                <!--Количество вопросов на экзамене-->
+                <div class="form-group label-floating">
+                    <label for="questionsCountPerExamInput" class="control-label">Количество вопросов на
+                        экзамене</label>
+                    <input type="number" class="form-control" id="questionsCountPerExamInput"
+                           name="questionsCountPerExam"
+                           required readonly value="{{exam.questionsCountPerExam}}">
+                    <span class="help-block hidden"></span>
+                </div>
+
+                <!--Время на экзамен в минутах-->
+                <div class="form-group label-floating">
+                    <label for="timeInMinutesInput" class="control-label">Время на экзамен в минутах</label>
+                    <input type="number" class="form-control" id="timeInMinutesInput" name="timeInMinutes" required
+                          readonly value="{{exam.timeInMinutes}}">
+                    <span class="help-block hidden"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="questionsList">
+        {{#each questions}}
+
+                <article class="well exam showExam">
+                    <div class="row">
+                        <div class="col-xs-offset-1 col-xs-10">
+                            <div class="idAttr">{{this.attributes.id}}</div>
+
+                            <header>
+                                <div class="form-group">
+                                    <legend>Вопрос №{{incIndex @key}}</legend>
+                                </div>
+                                <h4>{{this.attributes.question}}</h4>
+                            </header>
+
+                            <section>
+                                <div class="form-group answersHeader">
+                                    <legend>Ответы</legend>
+                                </div>
+                                {{#each this.attributes.answers}}
+                                    <div>
+                                        <p {{#if (isTrueAnswer ../this.attributes.correct @key)}}class="trueAnswer"{{/if}}>
+                                            {{incIndex @key}}) {{this}}
+                                        </p>
+                                    </div>
+                                {{/each}}
+
+                            </section>
+
+                        </div>
+                    </div>
+                </article>
+
+        {{/each}}
+    </div>
+</div>
